@@ -105,22 +105,23 @@ void queues()
 void pqueues()
 {
     priority_queue<int> pq; // MAXIMUM PRIORITY QUEUE
-    pq.push(2);    // ---------> {2}
-    pq.push(5);    // ---------> {5, 2}
-    pq.push(8);    // ---------> {8, 5, 2}
-    pq.emplace(3); // ---------> {8, 5, 3, 2}
-    pq.top(); // prints first element --> 8
-    pq.pop();  // remove first element
+    pq.push(2);             // ---------> {2}
+    pq.push(5);             // ---------> {5, 2}
+    pq.push(8);             // ---------> {8, 5, 2}
+    pq.emplace(3);          // ---------> {8, 5, 3, 2}
+    pq.top();               // prints first element --> 8
+    pq.pop();               // remove first element
 
     priority_queue<int, vector<int>, greater<int>> pqx; // MINIMUM PRIORITY QUEUE
-    pqx.push(2); // ----------> {2}
-    pqx.push(5); // ----------> {2, 5}
-    pqx.push(8); // ----------> {2, 5, 8}
-    pqx.emplace(10); // ------> {2, 5, 8, 10}
-    pq.top(); // prints first element --> 2
+    pqx.push(2);                                        // ----------> {2}
+    pqx.push(5);                                        // ----------> {2, 5}
+    pqx.push(8);                                        // ----------> {2, 5, 8}
+    pqx.emplace(10);                                    // ------> {2, 5, 8, 10}
+    pq.top();                                           // prints first element --> 2
 }
 
-void sets() {
+void sets()
+{
     set<int> s; // SORTED and UNIQUE
     s.insert(1);
     s.insert(2);
@@ -130,8 +131,8 @@ void sets() {
 
     auto it = s.find(3); // returns iterator which points to the element
     auto it = s.find(6); // if not found, always return s.end();
-    s.erase(3); // removes 3
-    s.count(3); // gives occurence of `3` = 1
+    s.erase(3);          // removes 3
+    s.count(3);          // gives occurence of `3` = 1
     auto it = s.find(3);
     s.erase(it);
     auto it1 = s.find(2);
@@ -141,27 +142,29 @@ void sets() {
     auto it = s.upper_bound(3);
 }
 
-void multisets() {
-    multiset<int> ms; // only SORTED and NOT UNIQUE
-    ms.insert(1); // {1}
-    ms.insert(1); // {1, 1}
-    ms.emplace(1); // {1, 1, 1}
-    ms.erase(1); // remove all occurences of `1`
+void multisets()
+{
+    multiset<int> ms;        // only SORTED and NOT UNIQUE
+    ms.insert(1);            // {1}
+    ms.insert(1);            // {1, 1}
+    ms.emplace(1);           // {1, 1, 1}
+    ms.erase(1);             // remove all occurences of `1`
     int count = ms.count(1); // count no of `1`
-    ms.erase(ms.find(1)); // remove one occurence of `1`
+    ms.erase(ms.find(1));    // remove one occurence of `1`
 
     // rest functions are same as set
 }
 
-void unorderedsets() {
+void unorderedsets()
+{
     unordered_set<int> us; // only UNIQUE and NOT SORTED
 
     // upper_bound and lower_bound don't work, rest all are same
     // no order of storing
 }
 
-void maps() {
-    
+void maps()
+{
 }
 
 int main()

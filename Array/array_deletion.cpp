@@ -17,11 +17,11 @@ int main()
         cout << "Position Cannot Be More Than " << n << endl;
     else
     {
-        x-- ;
-        for(int i = x ; i < 10 ; i++)
-            a[i] = a[i+1] ;
-        cout << "After Deletion :" << endl ;
-        for(int i = 0 ; i < 10 ; i++)
+        x--;
+        for (int i = x; i < 10; i++)
+            a[i] = a[i + 1];
+        cout << "After Deletion :" << endl;
+        for (int i = 0; i < 10; i++)
             cout << a[i] << endl;
     }
     return 0;
