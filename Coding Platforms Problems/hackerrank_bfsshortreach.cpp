@@ -28,7 +28,9 @@ vector<int> bfs(int n, int m, vector<vector<int>> edges, int s)
         for (auto el : adj[x])
         {
             if (status[el] == 1)
+            {
                 continue;
+            }
             status[el] = 1;
             distance[el] = distance[x] + 6;
             q.push(el);
@@ -37,7 +39,9 @@ vector<int> bfs(int n, int m, vector<vector<int>> edges, int s)
     for (int i = 1; i < distance.size(); i++)
     {
         if (i != s)
+        {
             res.push_back(distance[i]);
+        }
     }
     return res;
 }
